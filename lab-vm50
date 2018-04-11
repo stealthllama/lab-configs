@@ -2157,15 +2157,6 @@ K3hWNASBk4UAUVw4iq5ystEtD0sLQUI3bu3qf//Z
             sinkhole-ipv6 {
               ip-netmask 2600:5200::1/128;
             }
-            test-a {
-              ip-netmask 1.2.3.4;
-            }
-            test-b {
-              ip-netmask 5.6.7.8;
-            }
-            test-c {
-              ip-netmask 9.8.7.6;
-            }
           }
           log-settings {
             profiles {
