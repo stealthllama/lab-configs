@@ -2146,9 +2146,6 @@ K3hWNASBk4UAUVw4iq5ystEtD0sLQUI3bu3qf//Z
             outbound {
               color color2;
             }
-            hostile {
-              color color14;
-            }
           }
           threats {
             vulnerability;
