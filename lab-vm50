@@ -845,7 +845,7 @@ config {
               }
             }
           }
-          login-banner "Blah, blah, blah";
+          login-banner "Yadda, yadda, yadda";
           server-verification yes;
           type {
             static;
