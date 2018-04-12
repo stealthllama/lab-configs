@@ -851,7 +851,7 @@ config {
             static;
           }
           panorama-server 192.168.55.5;
-          domain stealthllama.net;
+          domain stealthllama.org;
         }
         setting {
           custom-logo {
