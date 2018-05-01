@@ -1679,7 +1679,7 @@ K3hWNASBk4UAUVw4iq5ystEtD0sLQUI3bu3qf//Z
                   action drop;
                   icmp-unreachable yes;
                   tag Drop;
-                  disabled yes;
+                  disabled no;
                   profile-setting {
                     profiles {
                       url-filtering "URL Filtering -  Alert Profile";
