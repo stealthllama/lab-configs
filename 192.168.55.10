@@ -851,7 +851,7 @@ config {
               }
             }
           }
-          login-banner "Yadda, yadda, yadda";
+          login-banner "Generic All-Purpose Login Banner";
           server-verification yes;
           type {
             static;
