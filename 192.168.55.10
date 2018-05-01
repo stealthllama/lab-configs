@@ -1698,6 +1698,7 @@ K3hWNASBk4UAUVw4iq5ystEtD0sLQUI3bu3qf//Z
                       virus "Antivirus - Alert Profile";
                       spyware strict;
                       vulnerability strict;
+                      data-filtering "Data Filtering Profile";
                     }
                   }
                   to outside;
