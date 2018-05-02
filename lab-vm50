@@ -2,7 +2,7 @@
 ! ip-address: 192.168.55.10
 ! public-ip-address: unknown
 ! netmask: 255.255.255.0
-! default-gateway: 192.168.55.1
+! default-gateway: 192.168.55.2
 ! ip-assignment: static
 ! ipv6-address: unknown
 ! ipv6-link-local-address: fe80::20c:29ff:fe2f:7d9/64
@@ -573,6 +573,12 @@ config {
         technology;
       }
     }
+    tag {
+      foo {
+        color color1;
+        comments "Test tag";
+      }
+    }
   }
   devices {
     localhost.localdomain {
@@ -824,7 +830,7 @@ config {
             snmp-system;
           }
           hostname lab-vm50;
-          default-gateway 192.168.55.1;
+          default-gateway 192.168.55.2;
           dns-setting {
             servers {
               primary 8.8.8.8;
@@ -845,7 +851,7 @@ config {
               }
             }
           }
-          login-banner "Yadda, yadda, yadda";
+          login-banner "Generic All-Purpose Login Banner";
           server-verification yes;
           type {
             static;
@@ -1687,7 +1693,15 @@ K3hWNASBk4UAUVw4iq5ystEtD0sLQUI3bu3qf//Z
                 }
                 "Allow all" {
                   profile-setting {
-                    group "Security Profile Group";
+                    profiles {
+                      file-blocking "File Blocking - Alert Profile";
+                      virus "Antivirus - Alert Profile";
+                      spyware "Anti-Spyware - Alert Profile";
+                      vulnerability "Vulnerability - Alert Profile";
+                      data-filtering "Data Filtering Profile";
+                      url-filtering "URL Filtering -  Alert Profile";
+                      wildfire-analysis default;
+                    }
                   }
                   to outside;
                   from inside;
@@ -2172,6 +2186,12 @@ K3hWNASBk4UAUVw4iq5ystEtD0sLQUI3bu3qf//Z
           address-group {
             test-grou {
               static [ sinkhole-ipv4 sinkhole-ipv6];
+            }
+            test-dag {
+              description "This is a test DAG";
+              dynamic {
+                filter "'foo' ";
+              }
             }
           }
           application-filter {
